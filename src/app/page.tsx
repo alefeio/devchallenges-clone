@@ -26,7 +26,6 @@ export default function Home() {
       <section className={styles.page3}>
         <div>
           <HowItWorksSection />
-          <SoftwareEngineer />
         </div>
       </section>
       <section className={styles.page4}>
