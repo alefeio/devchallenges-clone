@@ -18,31 +18,17 @@ export default function RoadmapSection({
 }: RoadmapSectionProps) {
     return (
         <section
-            className={styles.roadmap}
+            className={`${styles.roadmap} ${styles[position]}`}
             style={{
-                justifyContent: position === 'center' ? 'center' : position === 'left' ? 'flex-start' : 'flex-end',
-                textAlign: position,
-                display: 'flex',
-                alignItems: position === 'center' ? 'center' : position === 'left' ? 'flex-start' : 'flex-end',
                 backgroundImage: icon === '/roteiro1.svg' ? `url('/element3.svg')` : 'none',
                 backgroundRepeat: 'no-repeat',
             }}
         >
             <div
-                className={styles.container}
-                style={{
-                    backgroundImage: position === 'left' ? `url('/element2.svg')` : position === 'right' ? `url('/element4.svg')` : 'none',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: position === 'left' ? '50px top' : position === 'right' ? '90px top' : 'none',
-                }}
+                className={`${styles.container} ${styles[position]}`}
             >
                 <div
-                    className={styles.content}
-                    style={{
-                        display: 'flex',
-                        justifyContent: position === 'center' ? 'center' : position === 'left' ? 'flex-start' : 'flex-end',
-                        alignItems: position === 'center' ? 'center' : position === 'left' ? 'flex-start' : 'flex-end',
-                    }}
+                    className={`${styles.content} ${styles[position]}`}
                 >
                     <div className={styles.icon}>
                         <Image src={icon} alt="Ícone do Roadmap" width={80} height={80} />

@@ -1,5 +1,29 @@
 @import "variables";
 
+.imageSection {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 100px auto;
+  gap: 150px;
+
+  &.left {
+    flex-direction: row;
+  }
+
+  &:not(.left) {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    margin: 100px auto 50px;
+  }
+}
+
 .imageContainer {
   flex: 1;
   display: flex;
@@ -39,29 +63,6 @@
   background: linear-gradient(90deg, #ff66ff, #ffcc00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.imageSection {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 100px auto;
-  gap: 150px;
-
-  &.left {
-    flex-direction: row;
-  }
-
-  &:not(.left) {
-    flex-direction: row-reverse;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 .container {

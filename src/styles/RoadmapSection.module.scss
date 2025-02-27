@@ -6,6 +6,16 @@
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
+
+    &.left {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    &:not(.left) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
 }
 
 .container {
@@ -14,6 +24,14 @@
     gap: 2rem;
     padding-top: 100px;
     margin-top: 80px;
+
+    &.left {
+        background: url('/element2.svg') no-repeat 50px top;
+    }
+
+    &:not(.left) {
+        background: url('/element4.svg') no-repeat 90px top;
+    }
 }
 
 .content {
@@ -21,6 +39,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    &.left {
+        align-items: flex-start;
+    }
+
+    &:not(.left) {
+        align-items: flex-end;
+    }
 
     h3 {
         font-size: 28px;
