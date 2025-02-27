@@ -11,8 +11,6 @@
     overflow-y: auto;
     scrollbar-width: none;
     background: linear-gradient(to bottom, #020617, #0f172a99);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 
     @media (min-width: 1024px) {
         width: 33%;
@@ -26,7 +24,7 @@
 }
 
 .subtitle {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #64748b;
     margin-top: 0.25rem;
@@ -50,9 +48,6 @@
         transition: outline 0.2s ease-in-out;
 
         background: linear-gradient(to bottom, #020617, #1A1E30);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
 
         border: 0.5px solid rgba(100, 116, 139, 0.5);
 
@@ -86,7 +81,7 @@
 }
 
 .info {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #64748b;
     margin-top: 3.5rem;
 }
@@ -94,6 +89,26 @@
 @media (max-width: 768px) {
     .practiceSection {
         padding: 3rem 1rem;
+    }
+    
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .info {
+        font-size: 1.1rem;
+    }
+
+    .skillName {
+        font-size: 1.2rem;
+    }
+    
+    .skillDescription {
+        font-size: 1.1rem;
     }
 
     .container {
