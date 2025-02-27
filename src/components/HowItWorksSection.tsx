@@ -19,7 +19,7 @@ export default function HowItWorksSection() {
 
                     <div className={styles.step}>
                         <div className={styles.number}>
-                            <div className={styles.circle}>👨🏻‍💻</div>
+                            <div className={styles.circle2}>👨🏻‍💻</div>
                             <div className={styles.stepNumber}>[Passo 2]</div>
                         </div>
                         <h3>Código e Enviar</h3>
@@ -28,7 +28,7 @@ export default function HowItWorksSection() {
 
                     <div className={styles.step}>
                         <div className={styles.number}>
-                            <div className={styles.circle}>💬</div>
+                            <div className={styles.circle3}>💬</div>
                             <div className={styles.stepNumber}>[Passo 3]</div>
                         </div>
                         <h3>Revisão e Feedback</h3>

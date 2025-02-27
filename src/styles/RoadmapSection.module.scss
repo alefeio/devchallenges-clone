@@ -1,0 +1,84 @@
+@import 'variables';
+
+.roadmap {
+    padding: 3rem 1rem;
+    color: #ffffff;
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 640px;
+    display: flex;
+    gap: 2rem;
+    padding-top: 100px;
+    margin-top: 80px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+        font-size: 28px;
+    }
+}
+
+.icon {
+    margin-bottom: 1.5rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle {
+    color: #a855f7;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, #b3b3b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: $secondColor;
+}
+
+@media (max-width: 768px) {
+    .roadmap {
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,92 @@
+.practiceSection {
+    width: 100%;
+    max-width: 400px;
+    border: 0.5px solid rgba(100, 116, 139, 0.5);
+    padding: 1rem;
+    border-radius: 12px;
+    color: #cbd5e1;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+    background: linear-gradient(to bottom, #020617, #0f172a99);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    @media (min-width: 1024px) {
+        width: 33%;
+    }
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+.skillsList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        color: rgba(148, 163, 184, 0.8);
+        transition: outline 0.2s ease-in-out;
+
+        background: linear-gradient(to bottom, #020617, #1A1E30);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+
+        border: 0.5px solid rgba(100, 116, 139, 0.5);
+
+        a {
+            display: flex;
+            gap: 1rem;
+        }
+
+        &:hover {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+    }
+}
+
+.iconContainer {
+    width: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.skillName {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.skillDescription {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.info {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 3.5rem;
+}

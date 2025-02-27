@@ -1,0 +1,96 @@
+.projectSection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 0.5px solid rgba(100, 116, 139, 0.5);
+    border-radius: 12px;
+    padding: .5rem;
+    background: linear-gradient(to bottom, #020617, #0f172a99);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    scrollbar-width: none;
+    max-width: 66.66%;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 20px;
+    width: 100%;
+}
+
+.projectCard {
+    background: linear-gradient(to bottom, #020617, #1A1E30);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 0.5px solid rgba(100, 116, 139, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.content {
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.level {
+    color: #a3e635;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.progressBar {
+    display: flex;
+    gap: 2px;
+    width: 80px;
+    height: 6px;
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: 3px;
+}
+
+.progress {
+    width: 20%;
+    background: #3b82f6;
+    border-radius: 3px;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
