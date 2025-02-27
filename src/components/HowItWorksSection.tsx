@@ -6,7 +6,7 @@ export default function HowItWorksSection() {
     return (
         <section className={styles.howItWorks}>
             <div className={styles.container}>
-                <h2>Como funciona</h2>
+                <h2>Como <span className={styles.gradient}>funciona</span></h2>
                 <div className={styles.steps}>
                     <div className={styles.step}>
                         <div className={styles.number}>

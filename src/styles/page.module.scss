@@ -11,8 +11,15 @@
     background-repeat: no-repeat;
     background-position: right;
 
-    div {
+    aside {
         background: url("/3d-bg-2.png") no-repeat;
+        background-position: -150px center;
+        background-size: cover;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
