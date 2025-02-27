@@ -1,4 +1,5 @@
 import styles from "@/styles/ProjectSection.module.scss";
+import Image from "next/image";
 
 interface Project {
     title: string;
@@ -20,7 +21,13 @@ export default function ProjectSection({ projects }: ProjectSectionProps) {
                     {projects.map((project, index) => (
                         <div key={index} className={styles.projectCard}>
                             <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                <img src={project.img} alt={project.title} className={styles.image} />
+                                <Image
+                                    src={project.img}
+                                    alt={project.title}
+                                    width={80}
+                                    height={80}
+                                    className={styles.image}
+                                />
                                 <div className={styles.content}>
                                     <div className={styles.header}>
                                         <span className={styles.level}>{project.level}</span>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "@/styles/page.module.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
