@@ -62,23 +62,57 @@
 
 @media (max-width: 768px) {
     .roadmap {
-        justify-content: center;
+        padding: 2rem 1rem;
     }
 
     .container {
-        flex-direction: column;
+        flex-direction: column !important;
+        width: 100%;
     }
 
     .content {
         align-items: center;
         text-align: center;
-    }
+        padding: 0 1rem;
 
-    .title {
-        font-size: 1.5rem;
-    }
+        .icon {
+            margin: 0 auto 1.5rem;
+            width: 64px;
+            height: 64px;
+        }
 
-    .description {
-        font-size: 1rem;
+        .subtitle {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .description {
+            font-size: 0.95rem;
+        }
+
+        .icon {
+            width: 56px;
+            height: 56px;
+        }
     }
 }

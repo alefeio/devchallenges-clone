@@ -97,3 +97,46 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 768px) {
+    .howItWorksSection {
+        padding: 3rem 1rem;
+    }
+
+    .container {
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .stepsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.25rem;
+            margin: 0.75rem 0;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    }
+
+    .stepNumber {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .step:hover {
+        transform: translateY(-3px);
+    }
+}

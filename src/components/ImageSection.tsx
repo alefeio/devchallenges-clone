@@ -1,25 +1,45 @@
 import Image from "next/image";
 import styles from "../styles/ImageSection.module.scss";
 
-export default function ImageSection(props: { icon: string, title: string, description: string, image: string, position?: string, width?: number, height?: number }) {
+interface ImageSectionProps {
+  image: string;
+  title: string;
+  description: string;
+  position?: 'left' | 'right';
+  icon: string, 
+  width?: number, 
+  height?: number
+}
+
+export default function ImageSection({ 
+  image, 
+  title, 
+  description, 
+  position = 'left',
+  icon, 
+  width, 
+  height
+}: ImageSectionProps) {
   return (
-    <section className={styles.learn} style={{ flexDirection: props.position === 'left' ? 'row-reverse' : 'row' }}>
-      <div className={styles.imageContainer}>
-        <Image
-          aria-hidden
-          src={props.image}
-          alt={props.title}
-          width={props.width || 624}
-          height={props.height || 420}
-        />
-      </div>
-      <div className={styles.content}>
-        <h2>
-          <span className={styles.icon}>{props.icon}</span> {props.title}
-        </h2>
-        <p>
-          {props.description}
-        </p>
+    <section className={styles.imageSection}>
+      <div className={`${styles.container} ${styles[position]}`}>
+        <div className={styles.imageContainer}>
+          <Image
+            aria-hidden
+            src={image}
+            alt={title}
+            width={width}
+            height={height}
+          />
+        </div>
+        <div className={styles.content}>
+          <h2>
+            <span className={styles.icon}>{icon}</span> {title}
+          </h2>
+          <p>
+            {description}
+          </p>
+        </div>
       </div>
     </section>
   );

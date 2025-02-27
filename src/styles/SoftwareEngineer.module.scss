@@ -4,6 +4,7 @@
     align-items: center;
     text-align: center;
     padding: 80px 20px;
+    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     background-image: url("/planets.png");
@@ -13,6 +14,7 @@
 }
 
 .container {
+    width: 100%;
     max-width: 800px;
 
     h1 {
@@ -26,6 +28,12 @@
         font-size: 18px;
         color: rgba(255, 255, 255, 0.7);
         margin-bottom: 30px;
+    }
+
+    @media (max-width: 1024px) {
+        h1 {
+            font-size: 32px;
+        }
     }
 }
 
@@ -50,4 +58,77 @@
         background: linear-gradient(90deg, #a855f7, #ec4899, #ffcc00);
         border-color: transparent;
     }
+}
+
+@media (max-width: 768px) {
+  .softwareEngineerSection {
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .skill {
+    padding: 2rem 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 0.75rem 0;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .skillIcon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .softwareEngineerSection {
+    padding: 2rem 1rem;
+  }
+
+  .container h2 {
+    font-size: 1.75rem;
+  }
+
+  .skill {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .skillIcon {
+    font-size: 1.75rem;
+  }
 }

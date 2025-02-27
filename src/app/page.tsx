@@ -35,17 +35,17 @@ export default function Home() {
         <aside>
           <HowItWorksSection />
           <RoadmapSection icon="/roteiro1.svg" subtitle="Roteiro de carreira" title="Roteiro para Desenvolvedor Web Responsivo" description="Este roteiro foi criado para você praticar HTML, CSS e JavaScript básico. Você pode praticar com frameworks como Tailwind CSS, Bootstrap,... com base na sua necessidade." position="left" />
-          <div className={styles.projectAndPractice} style={{ flexDirection: 'row' }}>
+          <div className={`${styles.projectAndPractice} ${styles['left']}`}>
             <ProjectSection projects={projects} />
             <PracticeSection skills={skills} />
           </div>
           <RoadmapSection icon="/js.svg" subtitle="Trajetória profissional" title="Roteiro para Desenvolvedores JavaScript" description="Este roteiro foi criado para você praticar HTML, CSS e JavaScript básico. Você pode praticar com frameworks como Tailwind CSS, Bootstrap,... com base na sua necessidade." position="right" />
-          <div className={styles.projectAndPractice} style={{ flexDirection: 'row-reverse' }}>
+          <div className={`${styles.projectAndPractice} ${styles['right']}`}>
             <ProjectSection projects={projects2} />
             <PracticeSection skills={skills2} />
           </div>
           <RoadmapSection icon="/monitor.svg" subtitle="Trajetória profissional" title="Roteiro para Desenvolvedor Frontend" description="Este roteiro é o lugar onde você pratica frameworks populares que são necessários em quase todos os trabalhos de Frontend, como React, Vue.js e Svelte,..." position="left" />
-          <div className={styles.projectAndPractice} style={{ flexDirection: 'row' }}>
+          <div className={`${styles.projectAndPractice} ${styles['left']}`}>
             <ProjectSection projects={projects3} />
             <PracticeSection skills={skills3} />
           </div>

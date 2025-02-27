@@ -52,7 +52,7 @@ export default function PortfolioSection() {
                 width={80}
                 height={80}
             />
-            <h1 className={styles.highlight}>A melhor maneira de aprender <br />
+            <h1>A melhor maneira de aprender <br />
                 programação é <br />
                 <span className={styles.gradient}>construindo projetos</span></h1>
             <h3>Aprenda e melhore suas habilidades de programação fazendo e <br />
