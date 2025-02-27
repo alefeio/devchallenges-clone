@@ -1,0 +1,119 @@
+@import "variables";
+
+.hero {
+    padding: 20px;
+    background-image: url('/hero-bg-desktop.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: 1024px) {
+        // lg
+        background-size: contain;
+    }
+
+    @media (min-width: 768px) {
+        // md
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    @media (max-width: 768px) {
+        // sm e menores
+        padding-top: 20px;
+    }
+}
+
+.container {
+    padding-top: 170px;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 1000px;
+
+    h1 {
+        font-size: 60px;
+        color: $foreground;
+        line-height: $lineHeight-H1;
+    }
+
+    h2 {
+        margin-top: 100px;
+        text-align: center;
+        color: $foreground;
+        line-height: $lineHeight-H2;
+    }
+
+    h3 {
+        margin-top: 100px;
+        text-align: center;
+        color: $foreground;
+        line-height: $lineHeight-H3;
+    }
+
+    small {
+        color: #5B6B88;
+    }
+
+    p {
+        margin: 16px 0;
+    }
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #ff66ff, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+}
+
+.cta {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: $foreground;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.cta:hover {
+    background: linear-gradient(90deg, #a855f7, #ec4899, #ffcc00);
+    border-color: transparent;
+}
+
+.new {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #3C3952;
+    padding: 4px 12px 4px 4px;
+    border-radius: 20px;
+    display: inline-flex;
+
+    small {
+        background: #15803D;
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: $foreground;
+    }
+
+    strong {
+        font-size: 14px;
+        color: $foreground;
+    }
+}

@@ -1,0 +1,40 @@
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #0b0e16;
+    border: 2px solid #22263a;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+    
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 14px;
+      padding: 2px;
+      background: linear-gradient(135deg, #6d28ed, #d946ef);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    &:hover {
+      background: linear-gradient(135deg, #6d28ed, #d946ef);
+      color: white;
+      border-color: transparent;
+      
+      &::before {
+        inset: -6px;
+      }
+    }
+  }
+  

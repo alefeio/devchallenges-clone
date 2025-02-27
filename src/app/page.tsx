@@ -1,95 +1,40 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "@/styles/page.module.scss";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import ImageSection from "@/components/ImageSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import SoftwareEngineer from "@/components/SoftwareEngineer";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div>
+      <Header />
+      <section className={styles.page}>
+        <HeroSection />
+      </section>
+      <section className={styles.page2}>
+        <div>
+          <PortfolioSection />
+          <ImageSection icon="🏃" title="Escape do inferno dos tutoriais de codificação com" description="Pare de assistir apenas tutoriais de codificação e aprenda de verdade criando projetos de programação e revisando códigos de outras pessoas." image="/intro-1.png" position="left" />
+          <ImageSection icon="✨" title="Crie um portfólio de desenvolvedores excepcional" description="Projetos de construção ajudam a criar um portfólio de trabalho que mostra suas habilidades para potenciais empregadores." image="/intro-2.png" position="right" />
+          <ImageSection icon="🏆" title="Colete novas habilidades de programação" description="Participar de projetos de codificação na vida real ou aprender novas tecnologias pode ajudar você a desenvolver um conjunto diversificado de habilidades e melhorar suas perspectivas de carreira." image="/intro-3.png" position="left" />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      <section className={styles.page3}>
+        <div>
+          <HowItWorksSection />
+          <SoftwareEngineer />
+        </div>
+      </section>
+      <section className={styles.page4}>
+        <div>
+          <SoftwareEngineer />
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }

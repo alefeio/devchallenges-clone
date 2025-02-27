@@ -1,0 +1,53 @@
+.softwareEngineer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-image: url("/planets.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    max-width: 800px;
+
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 30px;
+    }
+}
+
+.gradient {
+    background: linear-gradient(90deg, #a855f7, #ec4899, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(90deg, #a855f7, #ec4899, #ffcc00);
+        border-color: transparent;
+    }
+}

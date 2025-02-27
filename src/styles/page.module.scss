@@ -1,0 +1,34 @@
+.page {
+    position: relative;
+    background-image: url("/bg-1.svg");
+    background-repeat: no-repeat;
+}
+
+.page2 {
+    margin-top: -150px;
+    position: relative;
+    background-image: url("/bg-2.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+
+    div {
+        background: url("/3d-bg-2.png") no-repeat;
+    }
+}
+
+.page3 {
+    margin-top: -150px;
+    position: relative;
+    background-image: url("/3d-bg-3.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.page4 {
+    position: relative;
+    background-image: url("/3d-bg-4.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-top: 24rem;
+    padding-bottom: 34rem;
+}

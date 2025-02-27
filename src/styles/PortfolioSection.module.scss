@@ -1,0 +1,44 @@
+@import "variables";
+
+.portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 96px auto;
+  text-align: center;
+
+  h1 {
+    font-size: 50px;
+    line-height: $lineHeight-H1;
+  }
+
+  img {
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+    color: $secondColor;
+    line-height: $lineHeight-H3;
+  }
+}
+
+.gradient {
+  background: linear-gradient(90deg, #ff66ff, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  img {
+    width: 100px;
+    margin: 10px;
+  }
+}
