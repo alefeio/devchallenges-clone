@@ -53,7 +53,9 @@
             margin: 0 auto 20px;
             font-weight: bold;
 
-            .circle, .circle2, .circle3 {
+            .circle,
+            .circle2,
+            .circle3 {
                 width: 52px;
                 height: 52px;
                 margin: 10px auto 20px;
@@ -63,7 +65,7 @@
                 align-items: center;
                 justify-content: center;
             }
-            
+
             .circle {
                 background: linear-gradient(to bottom right, rgba(192, 132, 252, 0.8), rgba(126, 34, 206, 0.8));
             }
@@ -90,8 +92,8 @@
 
 }
 
-.gradient {
+.stepNumber {
     background: linear-gradient(90deg, #ff66ff, #ffcc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
+}
