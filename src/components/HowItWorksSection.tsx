@@ -6,7 +6,15 @@ export default function HowItWorksSection() {
     return (
         <section className={styles.howItWorks}>
             <div className={styles.container}>
+                <Image
+                    aria-hidden
+                    src="/monitor.svg"
+                    alt="bg"
+                    width={80}
+                    height={80}
+                />
                 <h2>Como <span className={styles.gradient}>funciona</span></h2>
+                <p>Comece facilmente com 3 etapas</p>
                 <div className={styles.steps}>
                     <div className={styles.step}>
                         <div className={styles.number}>

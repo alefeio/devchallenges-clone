@@ -24,6 +24,8 @@ export default function RoadmapSection({
                 textAlign: position,
                 display: 'flex',
                 alignItems: position === 'center' ? 'center' : position === 'left' ? 'flex-start' : 'flex-end',
+                backgroundImage: icon === '/roteiro1.svg' ? `url('/element3.svg')` : 'none',
+                backgroundRepeat: 'no-repeat',
             }}
         >
             <div
