@@ -1,3 +1,5 @@
+'use client';
+
 import styles from "@/styles/page.module.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,12 +12,51 @@ import RoadmapSection from "@/components/RoadmapSection";
 import ProjectSection from "@/components/ProjectSection";
 import PracticeSection from "@/components/PracticeSection";
 
-import { projects, projects2, projects3 } from "@/services/projects";
+import useProjects from "@/hooks/useProjects";
+import useSkills from "@/hooks/useSkills";
 
-import { skills, skills2, skills3 } from "@/services/skills";
-
+const imageSections = [
+  {
+    icon: "🏃",
+    title: 'Escape do inferno dos tutoriais de codificação com "Aprenda, construa e revise"',
+    description: "Pare de assistir apenas tutoriais de codificação e aprenda de verdade criando projetos de programação e revisando códigos de outras pessoas.",
+    image: "/intro-1.png",
+    position: "right",
+    width: 624,
+    height: 420
+  },
+  {
+    icon: "✨",
+    title: "Crie um portfólio de desenvolvedores excepcional",
+    description: "Projetos de construção ajudam a criar um portfólio de trabalho que mostra suas habilidades para potenciais empregadores.",
+    image: "/intro-2.png",
+    position: "left",
+    width: 933,
+    height: 638
+  },
+  {
+    icon: "🏆",
+    title: "Colete novas habilidades de programação",
+    description: "Participar de projetos de codificação na vida real ou aprender novas tecnologias pode ajudar você a desenvolver um conjunto diversificado de habilidades e melhorar suas perspectivas de carreira.",
+    image: "/intro-3.png",
+    position: "right",
+    width: 868,
+    height: 856
+  }
+];
 
 export default function Home() {
+  const { projects } = useProjects();
+  const { skills } = useSkills();
+
+  const projects1 = projects.filter((project: any) => project.section === 1);
+  const projects2 = projects.filter((project: any) => project.section === 2);
+  const projects3 = projects.filter((project: any) => project.section === 3);
+
+  const skills1 = skills.filter((skill: any) => skill.section === 1);
+  const skills2 = skills.filter((skill: any) => skill.section === 2);
+  const skills3 = skills.filter((skill: any) => skill.section === 3);
+
   return (
     <div>
       <Header />
@@ -25,9 +66,9 @@ export default function Home() {
       <section className={styles.page2}>
         <aside>
           <PortfolioSection />
-          <ImageSection icon="🏃" title="Escape do inferno dos tutoriais de codificação com" description="Pare de assistir apenas tutoriais de codificação e aprenda de verdade criando projetos de programação e revisando códigos de outras pessoas." image="/intro-1.png" position="right" width={624} height={420} />
-          <ImageSection icon="✨" title="Crie um portfólio de desenvolvedores excepcional" description="Projetos de construção ajudam a criar um portfólio de trabalho que mostra suas habilidades para potenciais empregadores." image="/intro-2.png" position="left" width={933} height={638} />
-          <ImageSection icon="🏆" title="Colete novas habilidades de programação" description="Participar de projetos de codificação na vida real ou aprender novas tecnologias pode ajudar você a desenvolver um conjunto diversificado de habilidades e melhorar suas perspectivas de carreira." image="/intro-3.png" position="right" width={868} height={856} />
+          {imageSections.map((section, index) => (
+            <ImageSection key={index} {...section} />
+          ))}
         </aside>
       </section>
       <section className={styles.page3}>
@@ -35,8 +76,8 @@ export default function Home() {
           <HowItWorksSection />
           <RoadmapSection icon="/roteiro1.svg" subtitle="Roteiro de carreira" title="Roteiro para Desenvolvedor Web Responsivo" description="Este roteiro foi criado para você praticar HTML, CSS e JavaScript básico. Você pode praticar com frameworks como Tailwind CSS, Bootstrap,... com base na sua necessidade." position="left" />
           <div className={`${styles.projectAndPractice} ${styles['left']}`}>
-            <ProjectSection projects={projects} />
-            <PracticeSection skills={skills} />
+            <ProjectSection projects={projects1} />
+            <PracticeSection skills={skills1} />
           </div>
           <RoadmapSection icon="/js.svg" subtitle="Trajetória profissional" title="Roteiro para Desenvolvedores JavaScript" description="Este roteiro foi criado para você praticar HTML, CSS e JavaScript básico. Você pode praticar com frameworks como Tailwind CSS, Bootstrap,... com base na sua necessidade." position="right" />
           <div className={`${styles.projectAndPractice} ${styles['right']}`}>

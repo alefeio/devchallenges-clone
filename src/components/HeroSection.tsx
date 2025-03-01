@@ -1,3 +1,4 @@
+'use client';
 import styles from "../styles/HeroSection.module.scss";
 import Button from "./Button";
 

@@ -5,40 +5,40 @@ interface ImageSectionProps {
   image: string;
   title: string;
   description: string;
-  position?: 'left' | 'right';
-  icon: string, 
-  width?: number, 
-  height?: number
+  position: string;
+  icon: string;
+  width: number;
+  height: number;
 }
 
 export default function ImageSection({ 
   image, 
   title, 
   description, 
-  position = 'left',
+  position = 'right',
   icon, 
-  width, 
-  height
+  width = 624,
+  height = 420
 }: ImageSectionProps) {
   return (
     <section className={styles.imageSection}>
       <div className={`${styles.container} ${styles[position]}`}>
         <div className={styles.imageContainer}>
           <Image
-            aria-hidden
             src={image}
             alt={title}
             width={width}
             height={height}
+            quality={100}
+            priority={true}
           />
         </div>
         <div className={styles.content}>
           <h2>
-            <span className={styles.icon}>{icon}</span> {title}
+            <span className={styles.icon}>{icon}</span>
+            {title}
           </h2>
-          <p>
-            {description}
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     </section>

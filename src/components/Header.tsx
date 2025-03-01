@@ -18,15 +18,14 @@ export function Header() {
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        aria-hidden
                         src="/logo.svg"
                         alt="devChallenges"
                         width={160}
-                        height={21.65938864628821}
+                        height={21.66}
                     />
                 </Link>
 
-                <button 
+                <button
                     className={`${styles.menuButton} ${isMenuOpen ? styles.active : ''}`}
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
@@ -38,10 +37,60 @@ export function Header() {
 
                 <nav className={`${styles.nav} ${isMenuOpen ? styles.active : ''}`}>
                     <ul>
-                        <li><Link href="#about">Sobre</Link></li>
-                        <li><Link href="#projects">Projetos</Link></li>
-                        <li><Link href="#skills">Habilidades</Link></li>
-                        <li><Link href="#contact">Contato</Link></li>
+                        <li className={styles.hasSubmenu}>
+                            <Link href="#roadmap">Roteiro de carreira</Link>
+                            <ul className={styles.submenu}>
+                                <li>
+                                    <Link href="#web">
+                                        <Image src="/icons/icon1.png" alt="" width={20} height={20} />
+                                        Roteiro de desenvolvimento web
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#frontend">
+                                        <Image src="/icons/icon2.png" alt="" width={20} height={20} />
+                                        Desenvolvedor Front-end
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#fullstack">
+                                        <Image src="/icons/icon3.png" alt="" width={20} height={20} />
+                                        Desenvolvedor Full-stack
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className={styles.hasSubmenu}>
+                            <Link href="#projects">Projetos</Link>
+                            <ul className={styles.submenu}>
+                                <li>
+                                    <Link href="#web">
+                                        <Image src="/icons/icon4.png" alt="" width={20} height={20} />
+                                        Projetos HTML e CSS
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#frontend">
+                                        <Image src="/icons/icon5.png" alt="" width={20} height={20} />
+                                        Projetos JavaScript
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#fullstack">
+                                        <Image src="/icons/icon6.png" alt="" width={20} height={20} />
+                                        Projetos frontend
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#fullstack">
+                                        <Image src="/icons/icon3.png" alt="" width={20} height={20} />
+                                        Projetos fullstack
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><Link href="#skills">Blogs</Link></li>
+                        <li><Link href="#contact">Subscrição</Link></li>
                     </ul>
                 </nav>
                 <LoginButton label="Entrar" />

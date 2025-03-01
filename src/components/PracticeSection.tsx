@@ -14,8 +14,14 @@ interface PracticeSectionProps {
 }
 
 const PracticeSection = ({ skills }: PracticeSectionProps) => {
+    if (!skills) return (
+        <section className={styles.practiceSection}>
+            <div>Nenhuma habilidade encontrada</div>
+        </section>
+    );
+
     return (
-        <div className={styles.practiceSection}>
+        <section className={styles.practiceSection}>
             <div>
                 <h3 className={styles.title}>Para praticar:</h3>
                 <p className={styles.subtitle}>Habilidades sugeridas</p>
@@ -38,7 +44,7 @@ const PracticeSection = ({ skills }: PracticeSectionProps) => {
             <div className={styles.info}>
                 ℹ️ Você pode trabalhar com idiomas sugeridos ou escolher qualquer habilidade que queira praticar
             </div>
-        </div>
+        </section>
     );
 };
 
