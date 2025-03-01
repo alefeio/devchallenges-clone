@@ -3,17 +3,35 @@
 import { useEffect, useReducer } from 'react';
 import { dataProjects } from '../services/projects';
 
-const initialState = {
+interface Project {
+    title: string;
+    level: string;
+    link: string;
+    img: string;
+    description: string;
+    section: number;
+}
+
+interface ProjectState {
+    projects: Project[];
+}
+
+type ProjectAction = {
+    type: 'SET_PROJECTS';
+    payload: Project[];
+}
+
+const initialState: ProjectState = {
     projects: []
 }
 
-const reducer = (state: any, action: any) => {
+const reducer = (state: ProjectState, action: ProjectAction): ProjectState => {
     switch (action.type) {
         case 'SET_PROJECTS':
             return { ...state, projects: action.payload };
         default:
             return state;
-    }   
+    }
 }
 
 const useProjects = () => {
@@ -21,9 +39,6 @@ const useProjects = () => {
 
     useEffect(() => {
         const data = dataProjects;
-
-        console.log('data', data);
-
         dispatch({ type: 'SET_PROJECTS', payload: data });
     }, []);
 

@@ -7,6 +7,7 @@ interface Skill {
     description: string;
     link: string;
     icon: string;
+    section: number;
 }
 
 interface PracticeSectionProps {

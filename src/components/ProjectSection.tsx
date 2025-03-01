@@ -8,6 +8,7 @@ interface Project {
     link: string;
     img: string;
     description: string;
+    section: number;
 }
 
 interface ProjectSectionProps {

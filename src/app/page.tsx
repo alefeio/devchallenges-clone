@@ -15,6 +15,23 @@ import PracticeSection from "@/components/PracticeSection";
 import useProjects from "@/hooks/useProjects";
 import useSkills from "@/hooks/useSkills";
 
+interface Project {
+  title: string;
+  level: string;
+  link: string;
+  img: string;
+  description: string;
+  section: number;
+}
+
+interface Skill {
+  name: string;
+  description: string;
+  link: string;
+  icon: string;
+  section: number;
+}
+
 const imageSections = [
   {
     icon: "🏃",
@@ -49,13 +66,13 @@ export default function Home() {
   const { projects } = useProjects();
   const { skills } = useSkills();
 
-  const projects1 = projects.filter((project: any) => project.section === 1);
-  const projects2 = projects.filter((project: any) => project.section === 2);
-  const projects3 = projects.filter((project: any) => project.section === 3);
+  const projects1 = projects.filter((project: Project) => project.section === 1);
+  const projects2 = projects.filter((project: Project) => project.section === 2);
+  const projects3 = projects.filter((project: Project) => project.section === 3);
 
-  const skills1 = skills.filter((skill: any) => skill.section === 1);
-  const skills2 = skills.filter((skill: any) => skill.section === 2);
-  const skills3 = skills.filter((skill: any) => skill.section === 3);
+  const skills1 = skills.filter((skill: Skill) => skill.section === 1);
+  const skills2 = skills.filter((skill: Skill) => skill.section === 2);
+  const skills3 = skills.filter((skill: Skill) => skill.section === 3);
 
   return (
     <div>
