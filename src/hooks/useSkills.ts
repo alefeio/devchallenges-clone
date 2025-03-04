@@ -38,9 +38,6 @@ const useSkills = () => {
 
     useEffect(() => {
         const data = dataSkills;
-
-        console.log('data', data);
-
         dispatch({ type: 'SET_SKILLS', payload: data });
     }, []);
 

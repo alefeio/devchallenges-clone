@@ -1,17 +1,22 @@
 .button {
-    background: linear-gradient(90deg, #a855f7, #ec4899);
-    color: white;
+    overflow: hidden;
+    color: #f9fafb; // text-gray-50
+    border-radius: 1rem; // rounded-2xl
     padding: 14px 28px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 20px;
-    cursor: pointer;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease-in-out;
+    width: fit-content; // w-fit
+    height: fit-content; // h-fit
+    border: 1px solid rgba(249, 250, 251, 0.2); // border border-gray-50/20
+    outline: 2px solid rgba(249, 250, 251, 0.2); // outline outline-gray-50/20
+    outline-offset: 2px; // outline-offset-2
+    font-weight: 600; // font-semibold
+    background-color: #7e22ce; // bg-purple-700
+    transition: all 0.2s ease-in-out; // transition duration-200 ease-in-out
 
     &:hover {
-        background: linear-gradient(90deg, #a855f7, #ec4899, #ffcc00);
-        border-color: transparent;
+        background: linear-gradient(to top left,
+                #3730a3, // from-indigo-700
+                #7e22ce, // via-purple-700
+                #be185d // to-pink-700
+            );
     }
 }

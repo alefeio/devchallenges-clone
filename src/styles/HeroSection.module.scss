@@ -7,17 +7,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (min-width: 1024px) {
-       
-        background-size: contain;
-    }
-
-    @media (min-width: 768px) {
-       
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
     @media (max-width: 768px) {
        
         padding-top: 20px;
@@ -127,10 +116,14 @@
   .container {
     flex-direction: column-reverse;
     gap: 2rem;
-    text-align: center;
 
     h1 {
         font-size: 32px;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 1.4rem;
     }
   }
 

@@ -16,9 +16,9 @@ export default function HeroSection() {
                         codificação da vida real</span>
                 </h1>
                 <p className={styles.description}>
-                    Torne-se um proficiente programador front-end ou full-stack com <br />
-                    nossos desafios de codificação cuidadosamente selecionados. <br />
-                    Melhore suas habilidades e consiga o emprego de desenvolvedor <br />
+                    Torne-se um proficiente programador front-end ou full-stack com 
+                    nossos desafios de codificação cuidadosamente selecionados. 
+                    Melhore suas habilidades e consiga o emprego de desenvolvedor 
                     dos seus sonhos.
                 </p>
                 <Button label="Melhore suas habilidades de front-end agora" />

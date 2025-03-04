@@ -1,40 +1,42 @@
 .button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: #0b0e16;
-    border: 2px solid #22263a;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
-    
-    &::before {
-      content: "";
-      position: absolute;
-      inset: -4px;
-      border-radius: 14px;
-      padding: 2px;
-      background: linear-gradient(135deg, #6d28ed, #d946ef);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      transition: all 0.3s ease-in-out;
-    }
-  
-    &:hover {
-      background: linear-gradient(135deg, #6d28ed, #d946ef);
-      color: white;
-      border-color: transparent;
-      
-      &::before {
-        inset: -6px;
-      }
-    }
+  position: relative;
+  padding: 0.75rem 1.5rem; // px-6 py-3
+  border-radius: 0.75rem; // rounded-xl
+  font-size: 0.75rem; // text-xs
+  background: linear-gradient(to bottom, #020617, #1A1E30);
+  width: fit-content; // w-fit
+  height: fit-content; // h-fit
+  outline: 2px solid transparent; // outline
+  outline-offset: 2px; // outline-offset-2
+  outline-color: #1e293b; // outline-slate-800
+  font-weight: 600; // font-semibold
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    outline-color: #8b5cf6; // hover:outline-purple-500
+    background: linear-gradient(to bottom right,
+        #6366f1, // from-indigo-500
+        #8b5cf6, // via-purple-500
+        #ec4899 // to-pink-500
+      );
   }
-  
+
+  // Estilização do efeito de vidro (glass-effect)
+  &.glass-effect {
+    background: rgba(30, 41, 59, 0.3); // Ajuste da opacidade para efeito de vidro
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  // Pseudo-elementos ::before e ::after
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}

@@ -19,10 +19,6 @@ export default function RoadmapSection({
     return (
         <section
             className={`${styles.roadmap} ${styles[position]}`}
-            style={{
-                backgroundImage: icon === '/roteiro1.svg' ? `url('/element3.svg')` : 'none',
-                backgroundRepeat: 'no-repeat',
-            }}
         >
             <div
                 className={`${styles.container} ${styles[position]}`}
