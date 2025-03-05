@@ -67,10 +67,14 @@
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto;
   display: flex;
   align-items: center;
   gap: 4rem;
+
+  div{
+    padding: 0 3rem;
+  }
 }
 
 // Classes para controlar a direção do flex

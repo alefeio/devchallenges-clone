@@ -1,5 +1,17 @@
 @import "variables";
 
+@font-face {
+  font-family: 'Woff2';
+  src: url('/font/842eba58994a5460-s.p.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
+  font-family: 'Woff2', sans-serif;
+}
+
 html,
 body {
   max-width: 100vw;
