@@ -1,20 +1,18 @@
 @import "variables";
 
 .imageSection {
-  display: flex; // flex
-  flex-direction: column; // flex-col
-  gap: 0.75rem; // gap-3
-  padding-left: 0.5rem; // px-2
-  padding-right: 0.5rem; // px-2
-  align-items: center; // items-center
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.5rem;
+  align-items: center;
 
   @media (min-width: 1024px) {
-    // lg:
-    flex-direction: row; // lg:flex-row
-    gap: 12rem; // lg:gap-12 (prioridade para este valor)
-    gap: 10rem; // lg:gap-[10rem] (se necessário, pode substituir o valor anterior)
-    padding-left: 6rem; // lg:px-24
-    padding-right: 6rem; // lg:px-24
+    flex-direction: row;
+    gap: 12rem;
+    gap: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
@@ -32,13 +30,12 @@
 }
 
 .content {
-  text-align: center; // text-center
-  padding-left: 3rem; // px-12
-  padding-right: 3rem; // px-12
+  text-align: left;
+  width: 50%;
 
-  @media (min-width: 1024px) { // lg:
-    width: 50%; // lg:w-6/12 (6/12 = 50%)
-    text-align: left; // lg:text-left
+  h2,
+  p {
+    margin: 0 4rem;
   }
 
   h2 {
@@ -48,9 +45,19 @@
   }
 
   p {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 16px;
+    color: #94a3b8;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    h2,
+    p {
+      margin: 0 2rem;
+    }
   }
 }
 
@@ -72,12 +79,11 @@
   align-items: center;
   gap: 4rem;
 
-  div{
+  div {
     padding: 0 3rem;
   }
 }
 
-// Classes para controlar a direção do flex
 .left {
   flex-direction: row-reverse;
 }
@@ -92,7 +98,7 @@
   }
 
   .container {
-    flex-direction: column !important; // Força coluna em mobile independente da posição
+    flex-direction: column !important;
   }
 
   .content {
@@ -112,8 +118,7 @@
   }
 
   .imageContainer {
-    width: 100%;
-    max-width: 300px;
+    flex: 1;
     margin: 0 auto;
 
     img {

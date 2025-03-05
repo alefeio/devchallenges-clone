@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
 
-// Configuração do fake timer
 beforeEach(() => {
   jest.useFakeTimers();
 });

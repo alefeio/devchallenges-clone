@@ -1,35 +1,33 @@
 .button {
   position: relative;
-  padding: 0.75rem 1.5rem; // px-6 py-3
-  border-radius: 0.75rem; // rounded-xl
-  font-size: 0.75rem; // text-xs
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
   background: linear-gradient(to bottom, #020617, #1A1E30);
-  width: fit-content; // w-fit
-  height: fit-content; // h-fit
-  outline: 2px solid transparent; // outline
-  outline-offset: 2px; // outline-offset-2
-  outline-color: #1e293b; // outline-slate-800
-  font-weight: 600; // font-semibold
+  width: fit-content;
+  height: fit-content;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  outline-color: #1e293b;
+  font-weight: 600;
   text-decoration: none;
   color: white;
 
   &:hover {
-    outline-color: #8b5cf6; // hover:outline-purple-500
+    outline-color: #8b5cf6;
     background: linear-gradient(to bottom right,
-        #6366f1, // from-indigo-500
-        #8b5cf6, // via-purple-500
-        #ec4899 // to-pink-500
+        #6366f1,
+        #8b5cf6,
+        #ec4899
       );
   }
 
-  // Estilização do efeito de vidro (glass-effect)
   &.glass-effect {
-    background: rgba(30, 41, 59, 0.3); // Ajuste da opacidade para efeito de vidro
+    background: rgba(30, 41, 59, 0.3);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  // Pseudo-elementos ::before e ::after
   &::before,
   &::after {
     content: "";

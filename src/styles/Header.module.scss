@@ -8,11 +8,10 @@
 
     background-image: linear-gradient(to top,
             rgba(2, 6, 23, 0.3),
-            #020617 // to-slate-950
+            #020617
         );
 
     @media (min-width: 1024px) {
-        // lg:
         height: 4.5rem;
         padding: 1.25rem;
     }

@@ -56,7 +56,6 @@ a {
   }
 }
 
-// Mobile adjustments
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -73,7 +72,6 @@ a {
     padding: 0.5rem;
   }
 
-  // Prevenir zoom indesejado em inputs em iOS
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -90,7 +88,6 @@ a {
   }
 }
 
-// Melhorias para dispositivos touch
 @media (hover: none) {
   a:active,
   button:active {
